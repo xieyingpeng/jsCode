@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>map方法的应用</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var obj = [
+				{
+					name :'zhangsan',
+					age: 16
+				},
+				{
+					name :'lisi',
+					
+					age :15
+				},
+				{
+					name :"wanger",
+					age :20
+				}
+			
+			];
+			 var newNames = [];
+			 var newAges = [];
+			 
+			 obj.forEach(function(item,index ,array){
+				 var myname = obj[item].name;
+				 var myage = obj[item].age;
+				 newNames.push(myname);
+				 newAges.push(myage);
+			 })
+			 console.log(newNames);
+			 console.log(newAges);
+			/*
+			for (var i = 0 ; i < obj.length; i++){
+				var myname = obj[i].name;
+				var myage = obj[i].age;
+				newNames.push(myname);
+				
+				newAges.push(myage);
+			}//正常的操作
+			console.log(newNames);
+			console.log(newAges); */
+			//用map（）方法
+			/* var res1 = obj.map(function(item,index){
+				return item.name;
+			})
+			var res2 = obj.map(function(item ,index){
+				return item.age;
+			})
+			console.log(res1);
+			console.log(res2); */
+		</script>
+	</body>
+</html>

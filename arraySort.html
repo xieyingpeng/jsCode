@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			/* var  valuse = [2,3,24,2];
+			//数组倒序
+			valuse.reverse();
+			console.log(valuse);
+			//sort()方法排序
+			console.log(valuse.sort());
+			function compare(a,b ){
+				if ( a > b) {
+					return 1 ;
+				} else {
+					return -1;
+				}
+			}
+			res = compare(2,3);
+			console.log(res);
+			//数组的操作方法 concat()数组的合并 slice()数组的分割 
+			var colors = ['red','blue'];
+			var res = colors.concat('green');//数组的合并
+			console.log(res);
+			console.log(colors.concat({name :"谢应鹏"}));
+			console.log(colors.splice(1));//数组的分割
+			//数组的位置方法 idexOf()  lastIndexOf()
+			let  arry = [2,2,5,6,0];
+			console.log(arry.indexOf(5));//从前往后面查
+			console.log(arry.lastIndexOf('6',3));//从后往面查
+			//数组的迭代方法 filter()将数组进行过滤方法
+			var number = [1,2,3,4,5];
+			var res = number.filter(function(item , index,array){
+			
+				console.log(item);
+				console.log(index);
+				console.log(array);
+				return item > 1;//把大于1的数过滤出来
+			});
+			console.log(res); */
+			//map()可以操作数组的每一项元素
+			var number = [1,2,3,4,5];
+			/* var mapresult =  number.map(function(item, index ,array){
+				return item*2;//数组里面的每一项元素乘2
+			});
+			console.log(mapresult); */
+			//forEach()对数组进行遍历
+			for (var i = 0 ; i < number.length ; i++){
+				console.log(number[i]);
+			}
+			var  res = number.forEach(function(item ,index ,array){
+				console.log(item);
+			});
+			//上面的两种方法都是对数组进行遍历
+			
+		</script>
+	</body>
+</html>
