@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Goloble对象</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			//URI  统一通用定位符
+			var uri = 'http://www.apeland.cn/web index.html?name =zhangsan';
+			console.log(encodeURI(uri));//只对空格识别 看见的%20是识别出来的空格
+			console.log(encodeURIComponent(uri));//对斜线 空格识别
+		</script>
+	</body>
+</html>
