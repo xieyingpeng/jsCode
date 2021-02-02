@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>date日期对象</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var now = new Date();//new一个日期对象输出系统的时间
+			/* console.log(now);//一般使用这个
+			var time = new Date('December 25 , 1999 12:34:00');//传入参数第一种方式
+			console.log(time);
+			var time = new Date (2021 ,11,25);//第二种输入形式 如果以整数的形式输入则月份是从0-11 0表示1月
+			console.log(time);
+			var time = new Date(2021,11,25,12,25,9);//第三种输入形式 分别表示年月日  时分秒
+			console.log(time); */
+			//常用方法
+			/* console.log(now.getDate());//获取月份的第几天（1-31）
+			console.log(now.getMonth());//获取月份（0-11）
+			console.log(now.getDay());//获取一个星期中的第几天（星期一到星期天)
+			console.log(now.getFullYear());//获取年份）
+			console.log(now.getHours());//获取小时（0-23—）
+			console.log(now.getMinutes());//获取分钟（0-59）
+			console.log(now.getSeconds());//获取秒）0-59 */
+			//日期格式化
+			console.log(now.toDateString());//获取星期几 月份 日年
+			console.log(now.toTimeString());//获取时分秒
+			console.log(now.toLocaleDateString());//获取年月日（常用）
+			console.log(now.toLocaleTimeString());//获取时分秒 格式化（常用）
+			console.log(now.toLocaleString());//获取年月日 时分秒（常用）
+		</script>
+	</body>
+</html>
