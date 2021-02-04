@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>字符串和数值相互转换</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			//字符串转换为数值
+			var str = '124555.331123111';
+			console.log(typeof(str));//string类型
+			console.log(parseInt(str));//把字符型小数转换成整数
+			console.log(parseFloat(str));//把字符型小数转换为小数number类型
+			var str = ' 283.38sg';
+			console.log(Number(str));//如果字符串不是一个数值 则返回NAN
+			//有一个方法判断是否是一个NAN
+			var a = Number(str);
+			console.log(isNaN(a));//如果是返回true 否则返回false
+			//数值转换W为字符串
+			var  num = 235.23;
+			console.log(num.toString());//把数值转换为字符串
+			console.log(typeof num.toString());//此时是一个string类型
+			console.log(String(num));//强制类型转换
+			//隐式转换
+			console.log(''+num);
+			console.log(num.toFixed());//可以指定小数点后面需要保留几位//任如果不指定位数则  转换为整数
+			console.log(num.toFixed(2));//保留小数点后2位（常用)
+			
+			
+		</script>
+	</body>
+</html>
