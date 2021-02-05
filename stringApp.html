@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>字符串方法的应用</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var  str = 'xieYingPeng';
+			
+			//console.log(str.length);
+			/* console.log(str.charAt(1));//查找字符串位置为1 的字符
+			console.log(str.charCodeAt(1));//(i的编码)获取指定的字符的编码
+			console.log(str.concat('HelloWorld'));//字符串的连接 */
+			/* console.log(str.slice(2,3));//从第二个位置开始分割到最后一个字符
+			console.log(str.substring(2,3));//从2到3取不到位置3的字符
+			console.log(str.substr(2,3));//可以取到2-3的字符
+			console.log(str.slice(-2));//相当于从后面分割 */
+			console.log(str.indexOf('x'));//返回对应字符的索引位置
+			console.log(str.indexOf('i',2));//指定位置从2开始找返回的结果是4
+			console.log(str.lastIndexOf('i',8));//从后面开始查找
+			var str1 = "     xishg s    ";
+			console.log(str1);
+			console.log(str1.trim());//trim()方法的作用是清除字符串的空格
+			console.log(str.toUpperCase());//把所有字符串转换为大写
+			console.log(str.toLowerCase());//把所有字符串转换为小写
+			var str2 = "xisieh isgskngsighwogn";
+			//查找当前字符
+			
+			var p = str2.indexOf('i');//这个方法只能返回第一个所在的位置 而不能返回所在的所有位置
+			//如果找不到返回-1
+			//查找字符在字符串中所在的所有位置用一个while循环
+			var arr = [];//定义一个空的数组来接收查找字符所在的所有位置
+			while( p > -1){
+				arr.push(p);
+				p = str2.indexOf('i',p+1);//继续往后面查找所在的位置
+			}
+			console.log(arr);
+			
+		</script>
+	</body>
+</html>
