@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>元素对象的常用操作</title>
+		<script type="text/javascript">
+			/* 元素对象常用操作
+			1.createElement() 创建元素节点
+			2.createTextNode() 创建文本结点
+			3.appendChild() 为当前结点增加一个字节点(作为最后一个节点)
+			4.insertBefore() 为当前节点增加一个子节点(插入指定子节点之前)
+			5.removeChild() 删除当前节点的某个子节点 */
+			function init(){
+				var text = document.createTextNode("你好呀 谢应鹏");//创建一个文本结点
+				var p = document.createTextNode("p");//创建一个p 元素节点
+				p.appendChild(text);//为p元素节点追加text文本节点
+				doucment.body.appendChild(p);//为body追加p元素
+				
+			}
+		</script>
+	</head>
+	<body onload="init()">
+	</body>
+</html>
