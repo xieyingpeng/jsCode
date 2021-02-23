@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>鼠标事件</title>
+		<style type="text/css">
+			img{
+				display: none;
+			}
+		</style>
+	</head>
+	<body>
+		<p id="name">隐藏</p>
+		<img src="../project2/img2/2.jpg" id="pic">
+		<script type="text/javascript">
+			/* 
+			 1.onclick 鼠标点击时触发此事件
+			 2.ondblclick 鼠标双击时触发此事件
+			 3.onmousedown 鼠标按下时触发此事件
+			 4.onmouseup 鼠标弹起时触发此事件
+			 5.onmouseover 鼠标移动到某个设置了此事件的元素上时触发此事件
+			 6.onmousemove 鼠标移动时触发此事件
+			 7.onmouseout 鼠标从某个设置了此事件的元素上离开时触发此事件
+			 
+			 */
+			var names = document.getElementById("name");
+			var pic = document.getElementById("pic");
+			names.onmouseover = function(){
+				names.style.color = "green";
+			}
+			names.onmouseout = function(){
+				names.style.color = "blue";
+		
+			}
+			names.onclick = function(){
+				if(names.innerHTML === "隐藏"){
+					pic.style.display = "block";
+				} else {
+					pic.style.display = "block";
+					names.innerHTML = '显示';
+				}
+				
+			}
+			
+		</script>
+		
+		
+	</body>
+</html>

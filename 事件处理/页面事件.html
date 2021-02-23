@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>页面事件</title>
+		<script type="text/javascript">
+			/* 
+			 javaScript中常用的页面事件
+			 1. onload 当页面加载完成时触发此事件
+			 2. onunload 当页面卸载时触发此事件
+			 
+			 */
+		 /* window.onload =function show(){
+				var s = document.getElementById("content");
+				alert(s.innerHTML);
+				s.onmouseover = function(){
+					s.style.color = "red";
+				}
+					
+				s.onmouseout = function(){
+					s.style.color = "blue";
+				}
+			} */
+			setTimeout(function(){
+				var s = doucment.getElementById("content");
+				console.log(s);
+				s.onclick = function(){
+					this.innerHTML = "xieyingpeng";
+				}
+			},2000)
+		</script>
+		
+	</head>
+	<body>
+		<p id="content">
+			你好呀 谢应鹏
+		</p>
+		
+	</body>
+</html>

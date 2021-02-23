@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>表单事件</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			/*
+			 javaScript中常用的表单事件
+			1. onblur 当前元素失去焦点时触发此事件
+			2. onchange 当前元素失去焦点并且元素内容发生改变时触发此事件
+			3. onfocus 当某个元素获得焦点时触发此事件
+			4. onreseti 当表单被重置时触发此事件
+			5. onsubmit 当表单被提交时触发此事件
+			 
+			 */
+				
+			function textfous(obj){
+				obj.style.background  = "#eee";
+			}
+			function texblur(obj){
+				obj.style.background =""
+			}
+		</script>
+		<table border="" cellspacing="" cellpadding="">
+			<tr>
+				<td>用户名：</td>
+				<td><input type="text" onfocus="textfous(this)" onblur="texblur(this)"/></td>
+			</tr>
+			<tr>
+				<td>性别：</td>
+				<td><input type="text" name="" onfocus="textfous(this)" onblur="texblur(this)" /></td>
+			</tr>
+			<tr>
+				<td>邮箱：</td>
+				<td><input type="text" name="" onfocus="textfous(this)" onblur="texblur(this)" /></td>
+			</tr>
+		</table>
+	</body>
+</html>
