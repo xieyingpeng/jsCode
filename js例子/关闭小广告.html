@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>关闭小广告</title>
+		<style type="text/css">
+			*{
+				padding: 0;
+				margin: 0;
+			}
+			#qe_code{
+				width: 180px;
+				height: 160px;
+				position: relative;
+				margin: 100px;
+			}
+			#qe_code img{
+				position: absolute;
+				right: 0;
+			}
+			#close{
+				position: absolute;
+				width: 18px;
+				height: 18px;
+				border: 1px solid #e0e0e0;
+				text-align: center;
+				line-height: 18px;
+				cursor: pointer;
+				color: #666;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="qe_code">
+			<img src="../html5/img/home.png" id="code" >
+			<span id="close">X</span>
+		</div>
+		<script type="text/javascript">
+			var closes = doucment.getElementById('close');
+			var qe_codes =document.getElementById('qe_code');
+			closes.onclick = function(){
+				qe_codes.style.display = 'none';   
+			}
+	
+		</script>
+	</body>
+</html>

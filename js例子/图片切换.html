@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>图片切换</title>
+		<style type="text/css">
+			*{
+				padding: 0;
+				margin: 0;
+			}
+			#box{
+				border: 1px solid #ccc;
+				width: 430px;
+				height: 70px;
+				padding-top: 430px;
+				background: url(../验证码/image/1%20(1).jpg) no-repeat;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box">
+			<ul>
+				<li class="pic">
+					<img src="../html5/img/图标2.jpg" >
+				</li>
+				<li class="pic">
+					<img src="../html5/img/图标2.jpg" >
+				</li>
+				<li class="pic">
+					<img src="../html5/img/图标2.jpg" >
+				</li>
+				<li class="pic">
+					<img src="../html5/img/图标2.jpg" >
+				</li>
+				<li class="pic">
+					<img src="../html5/img/图标2.jpg" >
+				</li>
+			</ul>
+		</div>
+		
+		<script type="text/javascript">
+			//第一种做法 但是代码冗余度高  
+			/* var pic1 = doucment.getElementById('pic1');
+			var pic2 = doucment.getElementById('pic2');
+			var pic3 = doucment.getElementById('pic3');
+			var pic4 = doucment.getElementById('pic4');
+			var pic5 = doucment.getElementById('pic5');
+			var box = doucment.getElementById('box');
+			pic1.onmouseover = function(){
+				box.style.background = 'url(../验证码/image/1%20(1).jpg)'
+			}
+			pic2.onmouseover = function(){
+				box.style.background = 'url(../验证码/image/1%20(1).jpg)'
+			}
+			pic3.onmouseover = function(){
+				box.style.background = 'url(../验证码/image/1%20(1).jpg)'
+			}
+			pic4.onmouseover = function(){
+				box.style.background = 'url(../验证码/image/1%20(1).jpg)'
+			}
+			pic5.onmouseover = function(){
+				box.style.background = 'url(../验证码/image/1%20(1).jpg)'
+			} */
+			
+			/* // 第二种做法对上面的代码进行封装
+			function Id(id){//对获取事件源进行封装
+				return typeof id==="string"? doucment.getElementById(id):null;
+			}
+			function backgroundImg(liId ,imgSrc){//改变背景图
+				Id(liId).onmouseover = function(){//添加事件
+					Id('box').style.background = imgSrc;
+				}
+		
+			backgroundImg('pic1',url(../验证码/image/1%20(1).jpg));//调用函数
+			backgroundImg('pic2',url(../验证码/image/1%20(1).jpg));//调用函数
+			backgroundImg('pic3',url(../验证码/image/1%20(1).jpg));//调用函数
+			backgroundImg('pic4',url(../验证码/image/1%20(1).jpg));//调用函数
+			backgroundImg('pic5',url(../验证码/image/1%20(1).jpg));//调用函数
+			 */
+			//第三种做法  再次进行封装 此时上面的li标签的id改成class
+			function Id(id){//获取事件源
+				return typeof ==='string'?doucment.getElementById(id):null;
+			}
+			var pic = doucment.getElementsByClassName('pic');
+			for(var i = 0 ; i <pic.length ; i++){
+				var pic = pic[i];
+				pic.id = i+1;//获取每张照片的Id  因为是从0开始 所有我们进行加1 刚好符合照片数量从1到5
+				pic[i].onmouseover = function(){
+					Id('box').style.background = 'url(../验证码/image/1%20${this.id}.jpg))' ;
+				}
+			}
+			
+		</script>
+	</body>
+</html>

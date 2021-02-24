@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>千千音乐盒全选 反选 取消选择</title>
+		<style type="text/css">
+			*{
+				padding: 0;
+				margin: 0;
+			}
+			#panel{
+				border: 2px solid #4169E1;
+				margin-top: 50px;
+				margin-left: 350px;
+				margin-right: 600px;
+				background: rgba(255,255,255,0.5);
+				background-color: #4169E1;
+				border-radius: 8px;
+				
+				
+			}
+			#panel-title{
+				text-align: center;
+			}
+			
+			button{
+				margin-left: 100px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="panel">
+			<div id="panel-title">
+				<h3>千千音乐盒</h3>
+			</div>
+			
+			<div class="panel-content">
+				<input type="checkbox" name="" id="" value="" />后来----------------xx<br>
+				<input type="checkbox" name="" id="" value="" />天外之物---------------cc<br>
+				<input type="checkbox" name="" id="" value="" />Biagge--------bgg<br>
+				<input type="checkbox" name="" id="" value="" />x-B--------eee<br>
+				<input type="checkbox" name="" id="" value="" />体面-------wewe<br>
+				<input type="checkbox" name="" id="" value="" />你----yyy<br>
+				<input type="checkbox" name="" id="" value="" />涌浪-------uuu<br>
+				<input type="checkbox" name="" id="" value="" />kk-------ooo<br>
+				<input type="checkbox" name="" id="" value="" />离别---------qq<br>
+			</div>
+			<div class="panel-footer">
+				<hr>
+				<button type="button" id="allSelect">全选</button>
+				<button type="button" id="cancelSelect">取消选中</button>
+				<button type="button" id="reverseSelect">反选</button>
+			</div>
+		</div>
+		<script type="text/javascript">
+			function Id(id){
+				return typeof id==='string'?doucment.getElementById(id):null;
+				
+			}
+			var  input = doucment.getElementsByTagName('input');
+			Id('allSelect').onclick = function(){
+			//全选
+				for(var i = 0 ; i<input.length ; i++){
+					input[i].checked =true;
+				}
+				
+			}
+			Id('cancelSelect').onclick = function(){
+			//取消选中
+				for(var i = 0 ; i<input.length ; i++){
+					input[i].checked =false;
+				}
+				
+			}
+			Id('reverseSelect').onclick = function(){
+			//反选
+				for(var i = 0 ; i<input.length ; i++){
+					/* 第二种做法
+					input[i].checked = ! input[i].checked; */
+					if(input[i].checked){
+						input[i].checked =false;
+					} else {
+						input[i].checked =true;
+					}
+					
+				}
+				
+			}
+			
+		</script>
+	</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>衣服相册选择</title>
+		<style type="text/css">
+			*{
+				padding: 0;
+				margin: 0;
+			}
+			ul{
+				list-style: none;
+				overflow: hidden;
+			}
+			ul li{
+				float: left;
+				width: 50px;
+				height: 50px;
+				margin-left: 40px;
+				margin-top: 30px;
+				border: 2px solid #fff;//所有边框默认为白色
+			} 
+			ul li.active{/* 第一个边框是红色 */
+				border: 2px solid red;
+			}
+		</style>
+	</head>
+	<body>
+		<img src="../project3/img4/作业2.jpg" id="img1">
+		<ul>
+			<li class="active"><a href="#"><img src="../html5/img/home.png" width="50" class="img2"></a></li>
+			<li><a href="#"><img src="../html5/img/home.png" width="50" class="img2"></a></li>
+			<li><a href="#"><img src="../html5/img/home.png" width="50" class="img2"></a></li>
+			<li><a href="#"><img src="../html5/img/home.png" width="50" class="img2"></a></li>	
+			<li><a href="#"><img src="../html5/img/home.png" width="50" class="img2"></a></li>
+		</ul>
+		<script type="text/javascript">
+			var bigImg = doucment.getElementById('img1');
+			var img2 = doucment.getElementById('img2');
+			for (var i= 0 ; i < img2.length ; i++){
+				//遍历集合 给每个img标签添加事件
+				img2[i].onmouseover = function(){//当鼠标点击时触发此事件
+					for (var j = 0 ; j < img2.length ; j++){
+						//在悬浮到每个Li标签之前，先把所有的Li标签的类名都置为空值
+						img2[j].parentNode.parentNode.setAttribute('class','');
+					}
+					var img2Src = this.getAttribute('src');
+					img1.setAttribute('src',img2Src);
+					//给鼠标悬浮的img标签的父标签添加class
+					this.parentNode.parentNode.setAttribute('class','active');
+					
+				}
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>图片显示和隐藏</title>
+	</head>
+	<body>
+		<button type="button" id="b">隐藏</button>
+		<br>
+		<img src="../project3/img4/作业2.jpg" id="img1" >
+		<script type="text/javascript">
+			//获取事件源
+			var b = doucment.getElementById('b');
+			var newImg = doucment.getElementsByTagName('img')[0];//获得的是一个集合
+			//var isShow = true;
+			b.onclick = function(){//绑定事件
+			if(b.innerHTML === '隐藏'){
+				newImg.style.display = 'none';
+				b.innerHTML = "显示";
+				//isShow = false;
+			} else {
+				newImg.style.display = 'block';
+				b.innerHTML = "隐藏";
+				//isShow = true;
+			}
+				
+			}
+		</script>
+	</body>
+</html>
