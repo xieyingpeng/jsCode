@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>支付成功页面</title>
+		<style type="text/css">
+			#nav{
+				margin: 0 auto;
+				width: 500px;
+			}
+			.jump{
+				color: red;
+				font-size: 30px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="nav">
+			<h2>恭喜你，支付成功</h2>
+			<span class = jump>10</span>秒后自动返回首页
+			<p><button type="button">立即返回</button></p>
+		</div>
+		<script type="text/javascript">
+			window.onload = function(){
+				let timer = 10;
+				setInterval(()=>{
+					timer--;
+					document.getElementById('jump').innerText = timer;
+					if(timer === 0){
+						location.href = "html5/index.html";
+					}
+				},1000);
+			}
+			document.getElementsByTagName('button')[0].onclick = function(){
+				location.href = "html5/index.html";
+			}
+		</script>
+	</body>
+</html>

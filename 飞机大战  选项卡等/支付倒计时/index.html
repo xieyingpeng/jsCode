@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>支付倒计时</title>
+		<style type="text/css">
+				
+			#nav{
+				width: 200px;
+				height: 200px;
+				margin: 0 auto;
+				background-color: #685649;
+				margin: 400px;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div id="nav">
+			<p align="center">商品：es6</p>
+			<p align="center">原价：1000元</p>
+			<p align="center">现在：1元</p>
+			<p align="center">地址：云南</p>
+			<p align="center">
+				<button type="button">支付</button>
+				<button type="button">取消</button>
+			</p>
+		</div>
+		<script type="text/javascript">
+			document.getElementsByTagName('button')[0].onclick = function(){
+				let res = window.confirm("你确定要支付吗？");
+				if (res){
+					location.href = './succese.html';
+				}
+			}
+		</script>
+	</body>
+</html>

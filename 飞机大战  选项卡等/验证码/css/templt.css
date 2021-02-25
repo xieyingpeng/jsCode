@@ -1,0 +1,139 @@
+.center{
+    width: 1000px;
+    margin:0 auto;
+}
+/*头部a*/
+.top{
+    height:47px;
+    background-color: #e9e8e8;
+}.top .top_c{
+     height: 47px;
+     line-height: 47px;
+ }
+/*头部b logo*/
+.logo{
+    height: 99px;
+    background-color: #c70202;
+}
+.logo .l_c{
+    height: 99px;
+
+}
+/*设置logo*/
+.logo .l_left h1 a{
+    display:inline-block;
+    width: 211px;
+    height: 97px;
+    background:url(../image/search.png);
+    text-indent: -9999em;
+
+}
+.logo .l_center{
+    width: 296px;
+    height: 28px;
+    background-color: #e9e8e8;
+    padding:1px;
+    margin-top:34px;
+    margin-left:70px;
+    border-radius:5px;
+/*    设置圆角*/
+}
+.logo .l_center  .txt{
+    width: 236px;
+    height: 28px;
+    outline: none;
+}
+.logo .l_center  .btn{
+    width: 55px;
+    height: 28px;
+    background-color: #c70202;
+    color:beige;
+    border-radius:0 5px 5px 0;
+}
+.logo .l_right{
+    margin-top:35px ;
+}
+.logo .l_right li{
+    float:left;
+    height: 30px;
+    line-height:30px;
+    margin-left: 20px;
+}
+.logo .l_right input{
+    width: 56px;
+    height: 30px;
+    font-size:14px;
+
+}
+.logo .l_right li b{
+    width: 24px;
+    height: 20px;
+    display: inline-block;
+    background: url(../image/search.png);
+    vertical-align: middle;
+}
+.logo .l_right .sina{
+    background-position: 0 -27px;
+
+}
+/*logoE*/
+/*footB*/
+.foot{
+    height: 273px;
+    background-color: #2f2f2f;
+    padding:10px;
+}
+.foot .f_border{
+    height: 273px;
+    border:1px solid #ffd283;
+}
+.foot .f_border b {
+    position:absolute;
+    width: 17px;
+    height: 17px;
+    background: url();
+}
+.foot .f_left{
+    margin-top: 55px;
+    color:aliceblue;
+
+}
+.foot .f_left li{
+    height: 33px;
+    line-height: 33px;
+}
+.foot .f_left .cRed{
+    color: #c70202;
+
+}
+.foot .f_right{
+    margin-top: 34px;
+}
+.foot .f_right li{
+    float:left;
+    width: 105px;
+    height: 100px;
+    background-color: aqua;
+    margin-left: 20px;
+}
+.foot .f_right li a{
+    display: inline-block;
+    color:#666666;
+    text-align: center;
+}
+.foot .f_right li img{
+    margin-top: 10px;
+    display: inline-block;
+    width: 105px;
+    height: 105px;
+
+
+}
+.foot .footers{
+    font:normal normal 16px "微软雅黑";
+    text-align: center ;
+    color: darkgoldenrod;
+}
+/*footE*/
+/*logoE*/
+/*logoE*/

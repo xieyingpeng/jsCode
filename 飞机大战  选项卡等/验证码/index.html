@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>一个简单的登录界面</title>
+		<style type="text/css">
+			body{
+				background: url(image/logo.jpg) repeat;
+			}
+			#nav{
+				width: 300px;
+				height: 300px;
+				margin: 0 auto;
+				padding-left: 50px;
+				border: #7FFFD4 2px solid;
+				background: url(image/透明.png) no-repeat;
+			}
+			
+			.code{
+				font-size: 26px;
+				color: #8A2BE2;
+				
+				background-color: #BBBBBB;
+			}
+			#linkbt{
+				text-decoration: underline;
+				color: #A52A2A;
+			}
+			#Button1{
+				width: 70px;
+				height: 40px;
+				background-color: #BBBBBB;
+
+			}
+			h2{
+				color: royalblue;
+			}
+			ul li{
+				float: left;
+				font: 微软雅黑;
+				font-size: 24px;
+				list-style-type: none;
+				
+				padding-left: 40px;
+				
+			}
+			ul li a{
+				text-decoration: none;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div id="nav">
+			<h2 align="center">用户登录</h2>
+			<form>
+				用户名：
+				<input type="text" name="" id="" value=""  maxlength="7"/>
+				<br/>
+				密 &nbsp;&nbsp; 码:&nbsp;
+				<input type="password" name="" id="" value="" size="10" />
+			</form>
+			<div class="v">
+				<span class="code" id="checkCode">
+					adf34y
+				</span>
+				<a id="linkbt">看不清换一张</a>
+			</div>
+			<div class="input">
+				<label for="inputCode">验证码：</label>
+				<input type="text" name="" id="inputCode" value="" />
+				<span id="text_show">
+					
+				</span>
+			</div>
+			<div id="">
+				<ul>
+					<li><a href="web1.html">登录</a></li>
+					<li><a href="tuichu.html">退出</a></li>
+					
+				</ul>
+			</div>
+
+		</div>
+		<script type="text/javascript">
+			
+			window.onload = function(){
+				var res = getCode();
+				function getCode(){
+					let arr = ['0','1','2','3','4','5','6','7','8','9','a','b','c','d','e','f'];
+					let str = '';
+					for (let i = 0 ; i < 6 ; i++){
+						var num = Math.round(Math.random() * 15);
+						str += arr[num];
+					}
+					return str;
+				}
+				document.getElementById('checkCode').innerText = res ;
+				document.getElementById('linkbt' ).onclick= function() {
+					document.getElementById('checkCode').innerText= getCode() ;
+				}
+				document.getElementById('Button1').innerText = function(){
+					var code = document.getElementById('checkCode').innerText ;
+					var input =document.getElementById('inputCode').value ;
+					if(code !== inputCode){
+						alert("你输入的验证码不正确");
+						document.getElementById('inputCode').value = '';
+						return false;
+					}
+					else {
+
+					}
+				}
+			}
+		</script>
+	</body>
+</html>
